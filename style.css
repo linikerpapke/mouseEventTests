@@ -1,0 +1,120 @@
+
+body {
+text-align: center;
+padding: 30px 50px;
+}
+
+#mydiv {
+position: absolute;
+z-index: 9;
+background-color: #f1f1f1;
+text-align: center;
+border: 1px solid #d3d3d3;
+cursor:pointer
+}
+
+#mydivheader {
+padding: 10px;
+cursor: move;
+z-index: 10;
+background-color: #2196F3;
+color: #fff;
+cursor:pointer
+}
+  
+.icon {
+margin-left: 141px;
+position: absolute;
+padding-left: 15px;
+}
+  
+  .icon-wrapper {
+    
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 10px;
+    transform: translate(0, -50);
+  }
+  
+  .hand-icon {
+    position: absolute;
+  }
+  
+  .hand {
+    background: black;
+    width: 5px;
+    height: 16px;
+    border-radius: 20px;
+    position: relative;
+    left: -5px;
+    margin-bottom: 17px;
+    transform: rotate(-20deg);
+    animation: handAnim 1.2s infinite;
+  }
+  
+     .hand:after {
+      content: "";
+      background: black;
+      width: 17px;
+      height: 18px;
+      border-radius: 4px 8px 38px 15px;
+      transform: rotate(6deg) skewY(10deg);
+      position: absolute;
+      top: 13px;
+      left: -1px;
+    }
+  
+    .hand:before {
+      content: "";
+      background: black;
+      width: 6px;
+      height: 17px;
+      border-radius: 2px 40px 20px 20px;
+      position: absolute;
+      top: 12px;
+      left: -6px;
+      transform: rotate(-38deg);
+    }
+    
+.circle {
+background-color: #2196F3;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+position: absolute;
+top: -7px;
+left: -7px;
+opacity: .5;
+animation: circleAnim 1.2s infinite 2.1s;
+}
+  
+  @keyframes handAnim {
+    0% {
+      left: -20px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      left: 20px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circleAnim {
+    from { 
+      transform: scale(0);
+    }
+    to {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+          
+  
+#innerHtml {
+padding: 10px;
+}
